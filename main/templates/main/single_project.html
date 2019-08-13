@@ -1,0 +1,16 @@
+{% extends 'main/header.html' %}
+
+{% block content %}
+  <div class="row">
+
+        <div class="col s12 m9 l9">
+
+              <h3>{{project.project_title}}</h3>
+              <p style="font-size:70%">Published {{project.project_published}}</p>
+              {{project.project_content|safe}}
+
+          </div>
+        </div>
+      </div>
+
+{% endblock %}
