@@ -1,12 +1,20 @@
 {% extends 'main/header.html' %}
+{% load static %}
 
 {% block content %}
+<section id="featured_projects">
+<h3>Featured Projects:</h3>
+<br>
   <div class="row">
     {% for project in projects %}
         <div class="col s12 m6 l4">
           <div class="card hoverable">
+              <div class="card-image">
+          <img src="{% static "images/thumbnails/"|add:project.project_thumbnail|add:".png" %}" alt="{{project.project_title}}" height="200">
+          <span class="card-title">{{project.project_title}}</span>
+        </div>
             <div class="card-content">
-              <span class="card-title">{{project.project_title}}</span>
+              <span class="card-title">{{project.project_thumbnail}}</span>
             </div>
               <div class="card-action blue-grey darken-3">
               <a href="{{project.project_github_url}}" target="_blank">GITHUB</a>
@@ -16,4 +24,66 @@
         </div>
     {% endfor %}
   </div>
+        </section>
+
+<br>
+
+<section id="skills">
+      <h3>Skills:</h3>
+       <ol>
+                  <li><a href="https://github.com/PeterHinge" target="_blank" class="orange-text text-orange darken-1">GitHub</a></li>
+                  <li><a href="https://www.linkedin.com/in/peter-hinge-443298189/" target="_blank" class="orange-text text-orange darken-1">Linked In</a></li>
+                </ol>
+    </section>
+
+<br>
+
+<section id="technologies">
+      <h3>Technologies:</h3>
+       <ol>
+                  <li><a href="https://github.com/PeterHinge" target="_blank" class="orange-text text-orange darken-1">GitHub</a></li>
+                  <li><a href="https://www.linkedin.com/in/peter-hinge-443298189/" target="_blank" class="orange-text text-orange darken-1">Linked In</a></li>
+                </ol>
+    </section>
+
+<br>
+
+<section id="about">
+      <h3>About:</h3>
+      <p>
+        Hello, my name is Peter Hinge and I am a full stack developer and AI specialist.
+          I thoroughly enjoy broadening my horizons and always seek to keep up with contemporary technological research,
+          while also being product and result oriented. I am tech stack agnostic and a fast learner.
+      </p>
+    </section>
+
+<br>
+
+<section id="contact">
+      <h3>Contact:</h3>
+      <p class="sectionInfo">
+        If you are interested in getting in contact, I would love to hear from you!  You can contact me by filling out the form or through my contact information listed below:
+      </p>
+
+      <form>
+        <div class="formGroup">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter Name..." required="">
+        </div>
+
+        <div class="formGroup">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter Email..." required="">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" placeholder="Message..." cols="30" rows="10" required=""></textarea>
+        </div>
+
+        <br>
+        <input type="submit" value="Submit" class="btn orange darken-1" id="formSubmit">
+      </form>
+    </section>
+
 {% endblock %}
