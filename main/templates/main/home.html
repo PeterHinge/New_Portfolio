@@ -11,10 +11,10 @@
           <div class="card hoverable">
               <div class="card-image">
           <img src="{% static "images/thumbnails/"|add:project.project_thumbnail|add:".png" %}" alt="{{project.project_title}}" height="200">
-          <span class="card-title">{{project.project_title}}</span>
+          <span class="card-title"><span class="black"><strong>{{project.project_title}}</strong></span></span>
         </div>
             <div class="card-content">
-              <span class="card-title">{{project.project_thumbnail}}</span>
+              <p>{{project.project_description}}</p>
             </div>
               <div class="card-action blue-grey darken-3">
               <a href="{{project.project_github_url}}" target="_blank">GITHUB</a>
@@ -28,22 +28,25 @@
 
 <br>
 
+
 <section id="skills">
       <h3>Skills:</h3>
-       <ol>
-                  <li><a href="https://github.com/PeterHinge" target="_blank" class="orange-text text-orange darken-1">GitHub</a></li>
-                  <li><a href="https://www.linkedin.com/in/peter-hinge-443298189/" target="_blank" class="orange-text text-orange darken-1">Linked In</a></li>
-                </ol>
-    </section>
-
-<br>
-
-<section id="technologies">
-      <h3>Technologies:</h3>
-       <ol>
-                  <li><a href="https://github.com/PeterHinge" target="_blank" class="orange-text text-orange darken-1">GitHub</a></li>
-                  <li><a href="https://www.linkedin.com/in/peter-hinge-443298189/" target="_blank" class="orange-text text-orange darken-1">Linked In</a></li>
-                </ol>
+  <div class="carousel">
+    <a class="carousel-item"><img src="{% static "images/icons/1.png" %}"></a>
+      <a class="carousel-item"><img src="{% static "images/icons/2.png" %}"></a>
+          <a class="carousel-item"><img src="{% static "images/icons/3.png" %}"></a>
+      <a class="carousel-item"><img src="{% static "images/icons/4.png" %}"></a>
+          <a class="carousel-item"><img src="{% static "images/icons/5.png" %}"></a>
+      <a class="carousel-item"><img src="{% static "images/icons/6.png" %}"></a>
+          <a class="carousel-item"><img src="{% static "images/icons/7.png" %}"></a>
+      <a class="carousel-item"><img src="{% static "images/icons/8.png" %}"></a>
+          <a class="carousel-item"><img src="{% static "images/icons/9.png" %}"></a>
+      <a class="carousel-item"><img src="{% static "images/icons/10.png" %}"></a>
+          <a class="carousel-item"><img src="{% static "images/icons/11.png" %}"></a>
+      <a class="carousel-item"><img src="{% static "images/icons/12.png" %}"></a>
+                <a class="carousel-item"><img src="{% static "images/icons/13.png" %}"></a>
+      <a class="carousel-item"><img src="{% static "images/icons/14.png" %}"></a>
+  </div>
     </section>
 
 <br>
@@ -51,10 +54,17 @@
 <section id="about">
       <h3>About:</h3>
       <p>
-        Hello, my name is Peter Hinge and I am a full stack developer and AI specialist.
-          I thoroughly enjoy broadening my horizons and always seek to keep up with contemporary technological research,
+        Hello, my name is Peter Hinge and I am a full stack developer and AI specialist. I thoroughly enjoy
+          broadening my horizons and always seek to keep up with contemporary technological research and development,
           while also being product and result oriented. I am tech stack agnostic and a fast learner.
       </p>
+    <p>
+       I also enjoy taking extensive notes as I learn, which has resulted in in some elementary tutorials. Feel free to check them out:
+      </p>
+    <ul>
+                  <li><a href="https://github.com/PeterHinge/NN_notes" target="_blank" class="orange-text text-orange darken-1"><strong>Neural Networks and Genetic Algorithms</strong></a></li>
+                  <li><a href="https://github.com/PeterHinge/BC_notes" target="_blank" class="orange-text text-orange darken-1"><strong>Blockchain Technology</strong></a></li>
+                </ul>
     </section>
 
 <br>
