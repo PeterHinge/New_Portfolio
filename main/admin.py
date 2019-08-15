@@ -6,7 +6,7 @@ from .models import Project
 class ProjectAdmin(admin.ModelAdmin):
     fieldsets = [
         ("Title/date", {'fields': ['project_title', 'project_published']}),
-        ("Content", {'fields': ['project_content', 'project_thumbnail']}),
+        ("Content", {'fields': ['project_description', 'project_content', 'project_thumbnail']}),
         ("URLs", {'fields': ['project_github_url', 'project_slug']})
     ]
 
