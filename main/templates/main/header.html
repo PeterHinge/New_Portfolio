@@ -1,5 +1,7 @@
 <head>
   {% load static %}
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
   <!-- jQuery -->
@@ -21,6 +23,7 @@
           <li><a href="/#featured_projects" class="orange-text text-orange darken-1">Projects</a></li>
           <li><a href="/#about" class="orange-text text-orange darken-1">About</a></li>
           <li><a href="/#contact" class="orange-text text-orange darken-1">Contact</a></li>
+          <li><a href="{% static "files/cv.pdf" %}" target="_blank" class="btn orange darken-1 black-text"><i class="material-icons left">account_circle</i><strong>CV</strong></a></li>
         </ul>
       </div>
     </div>
@@ -28,9 +31,10 @@
 
   <ul class="sidenav" id="mobile-demo">
     <li><a href="/" class="orange-text text-orange darken-1">Home</a></li>
-    <li><a href="/" class="orange-text text-orange darken-1">Projects</a></li>
-    <li><a href="/" class="orange-text text-orange darken-1">About</a></li>
-    <li><a href="/" class="orange-text text-orange darken-1">Contact</a></li>
+    <li><a href="/#featured_projects" class="orange-text text-orange darken-1">Projects</a></li>
+    <li><a href="/#about" class="orange-text text-orange darken-1">About</a></li>
+    <li><a href="/#contact" class="orange-text text-orange darken-1">Contact</a></li>
+    <li><a href="{{project.project_github_url}}" target="_blank" class="btn orange darken-1 black-text"><strong>GITHUB</strong></a></li>
   </ul>
 
   <!-- Page content -->

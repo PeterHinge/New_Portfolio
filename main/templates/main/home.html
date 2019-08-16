@@ -10,17 +10,19 @@
     <div class="col s12 m6 l4">
       <div class="card hoverable">
         <div class="card-image">
-          <img src="{% static "images/thumbnails/"|add:project.project_thumbnail|add:".png" %}" alt="{{project.project_title}}" height="200">
-          <span class="card-title"><span class="black"><strong>{{project.project_title}}</strong></span></span>
+          <a href="{{project.project_slug}}">
+            <img src="{% static "images/thumbnails/"|add:project.project_thumbnail|add:".png" %}" alt="{{project.project_title}}" height="200">
+            <span class="card-title"><span class="black"><strong>{{project.project_title}}</strong></span></span>
+          </a>
         </div>
         <div class="card-content">
           <p>{{project.project_description}}</p>
         </div>
         <div class="card-action blue-grey darken-3">
-          <a href="{{project.project_github_url}}" target="_blank" class="btn orange darken-1 black-text">GITHUB</a>
+          <a href="{{project.project_github_url}}" target="_blank" class="btn orange darken-1 black-text"><strong>GITHUB</strong></a>
           &nbsp
           &nbsp
-          <a href="{{project.project_slug}}" class="btn orange darken-1 black-text">VIEW</a>
+          <a href="{{project.project_slug}}" class="btn orange darken-1 black-text"><strong>VIEW</strong></a>
         </div>
       </div>
     </div>
@@ -73,19 +75,40 @@
 
 <section id="about">
   <h3>About:</h3>
-  <p>
-    Hello, my name is Peter Hinge and I am a full stack developer and AI specialist. I thoroughly enjoy
-    broadening my horizons and always seek to keep up with contemporary technological research and development,
-    while also being product and result oriented. I am tech stack agnostic and a fast learner.
-  </p>
-  <p>
-    I also enjoy taking extensive notes as I learn, which has resulted in in some elementary tutorials for different technologies.
-    Feel free to check them out:
-  </p>
-  <ul>
-    <li><a href="https://github.com/PeterHinge/NN_notes" target="_blank" class="orange-text text-orange darken-1"><strong>Neural Networks and Machine Learning</strong></a></li>
-    <li><a href="https://github.com/PeterHinge/BC_notes" target="_blank" class="orange-text text-orange darken-1"><strong>Blockchain Technology</strong></a></li>
-  </ul>
+  <div class="row">
+    <div class="col s12, m3, l3">
+      <img src="{% static "images/pictures/portrait.JPG" %}" height="200" width="200" class="circle">
+    </div>
+    <div class="col s12, m9, l9">
+      <p>
+        Hello, my name is Peter Hinge and I am a full stack developer and AI specialist. I thoroughly enjoy
+        broadening my horizons and always seek to keep up with contemporary technological research and development,
+        while also being product and result oriented. I am tech stack agnostic and a fast learner.
+      </p>
+      <p>
+        I also enjoy taking extensive notes as I learn, which has resulted in in some elementary tutorials for different technologies.
+        Feel free to check them out:
+      </p>
+      <ul id="nn_dropdown" class="dropdown-content">
+        <li><a href="https://github.com/PeterHinge/NN_notes/blob/master/NN%20Basics%201.ipynb" target="_blank" class="dropdown-item orange-text text-orange darken-1"><strong>Basics of Neural Networks 1</strong></a></li>
+        <li><a href="https://github.com/PeterHinge/NN_notes/blob/master/NN%20Basics%202%20(OOP).ipynb" target="_blank" class="dropdown-item orange-text text-orange darken-1"><strong>Basics of Neural Networks 2 (OOP)</strong></a></li>
+        <li><a href="https://github.com/PeterHinge/NN_notes/blob/master/NEAT.ipynb" target="_blank" class="dropdown-item orange-text text-orange darken-1"><strong>NEAT Algorithm</strong></a></li>
+      </ul>
+      <a class="btn dropdown-trigger orange darken-1 black-text" href="#!" data-target="nn_dropdown">
+        <strong>Neural Networks and Machine Learning</strong>
+        <i class="material-icons right">arrow_drop_down</i>
+      </a>
+      &nbsp
+      <ul id="bc_dropdown" class="dropdown-content">
+        <li><a href="https://github.com/PeterHinge/BC_notes/blob/master/Blockchain%20fundamentals.ipynb" target="_blank" class="dropdown-item orange-text text-orange darken-1"><strong>Blockchain fundamentals</strong></a></li>
+        <li><a href="https://github.com/PeterHinge/BC_notes/blob/master/Blockchain%20Coin.ipynb" target="_blank" class="dropdown-item orange-text text-orange darken-1"><strong>Blockchain Coins</strong></a></li>
+      </ul>
+      <a class="btn dropdown-trigger orange darken-1 black-text" href="#!" data-target="bc_dropdown">
+        <strong>Blockchain Technology</strong>
+        <i class="material-icons right">arrow_drop_down</i>
+      </a>
+    </div>
+  </div>
 </section>
 
 <br>
