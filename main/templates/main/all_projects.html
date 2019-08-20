@@ -1,0 +1,30 @@
+{% extends 'main/header.html' %}
+{% load static %}
+
+{% block content %}
+  <h3>All Projects:</h3>
+  <br>
+  <div class="row">
+    {% for project in projects %}
+    <div class="col s12 m6 l4">
+      <div class="card hoverable">
+        <div class="card-image">
+          <a href="{{project.project_slug}}">
+            <img src="{% static "images/thumbnails/"|add:project.project_thumbnail|add:".png" %}" alt="{{project.project_title}}" height="200">
+            <span class="card-title"><span class="black"><strong>{{project.project_title}}</strong></span></span>
+          </a>
+        </div>
+        <div class="card-content">
+          <p>{{project.project_description}}</p>
+        </div>
+        <div class="card-action blue-grey darken-3">
+          <a href="{{project.project_github_url}}" target="_blank" class="btn orange darken-1 black-text"><strong>GITHUB</strong></a>
+          &nbsp
+          &nbsp
+          <a href="{{project.project_slug}}" class="btn orange darken-1 black-text"><strong>VIEW</strong></a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}

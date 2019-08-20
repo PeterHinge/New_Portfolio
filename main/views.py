@@ -4,13 +4,19 @@ from .models import Project
 
 
 # Create your views here.
-def homepage(request):
+def home_page(request):
     return render(request=request,
                   template_name='main/home.html',
                   context={'projects': Project.objects.all()})
 
 
-def project_page(request, current_slug):
+def all_projects_page(request):
+    return render(request=request,
+                  template_name='main/all_projects.html',
+                  context={'projects': Project.objects.all()})
+
+
+def single_project_page(request, current_slug):
     project_slugs = [project.project_slug for project in Project.objects.all()]
 
     if current_slug in project_slugs:

@@ -20,7 +20,7 @@
         <a href="#" data-target="mobile-demo" class="sidenav-trigger orange-text text-orange darken-1"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down white-text">
           <li><a href="/" class="orange-text text-orange darken-1">Home</a></li>
-          <li><a href="/#featured_projects" class="orange-text text-orange darken-1">Projects</a></li>
+          <li><a href="/all_projects" class="orange-text text-orange darken-1">Projects</a></li>
           <li><a href="/#about" class="orange-text text-orange darken-1">About</a></li>
           <li><a href="/#contact" class="orange-text text-orange darken-1">Contact</a></li>
           <li><a href="{% static "files/cv.pdf" %}" target="_blank" class="btn orange darken-1 black-text"><i class="material-icons left">account_circle</i><strong>CV</strong></a></li>
@@ -38,8 +38,9 @@
   </ul>
 
   <!-- Page content -->
+  <br />
   <div class="container">
-    <br />
+
     {% block content %} {% endblock %}
   </div>
   <br />
