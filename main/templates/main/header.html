@@ -27,18 +27,18 @@
           <li><a href="/all_projects" class="orange-text text-orange darken-1">Projects</a></li>
           <li><a href="/#about" class="orange-text text-orange darken-1">About</a></li>
           <li><a href="/#contact" class="orange-text text-orange darken-1">Contact</a></li>
-          <li><a href="{% static "files/cv.pdf" %}" target="_blank" class="btn orange darken-1 black-text"><i class="material-icons left">account_circle</i><strong>CV</strong></a></li>
+          <li><a href="{% static "files/cv.pdf" %}" target="_blank" class="btn orange darken-1 black-text"><i class="material-icons left">account_circle</i><strong>RESUME</strong></a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <ul class="sidenav" id="mobile-demo">
+  <ul class="sidenav blue-grey darken-3" id="mobile-demo">
     <li><a href="/" class="orange-text text-orange darken-1">Home</a></li>
-    <li><a href="/#featured_projects" class="orange-text text-orange darken-1">Projects</a></li>
+    <li><a href="/all_projects" class="orange-text text-orange darken-1">All Projects</a></li>
     <li><a href="/#about" class="orange-text text-orange darken-1">About</a></li>
     <li><a href="/#contact" class="orange-text text-orange darken-1">Contact</a></li>
-    <li><a href="{{project.project_github_url}}" target="_blank" class="btn orange darken-1 black-text"><strong>GITHUB</strong></a></li>
+    <li><a href="{% static "files/cv.pdf" %}" target="_blank" class="btn orange darken-1 black-text"><i class="material-icons left">account_circle</i><strong>RESUME</strong></a></li>
   </ul>
 
   <!-- Page content -->
